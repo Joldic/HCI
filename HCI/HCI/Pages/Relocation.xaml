@@ -8,7 +8,19 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Relocation">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10, 10, 0, 0" />
+        <Label Content="Relocation" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" FontWeight="Heavy" FontSize="20"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,444,0,0" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Width="224"/>
+        <DatePicker HorizontalAlignment="Center" Margin="0,539,0,0" VerticalAlignment="Top" Width="224"/>
+        <Button Content="Transfer" HorizontalAlignment="Center" Margin="0,632,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Equipment" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Quantity" HorizontalAlignment="Center" Margin="0,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Room from" HorizontalAlignment="Left" Margin="182,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Room to" HorizontalAlignment="Left" Margin="190,404,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Select date" HorizontalAlignment="Left" Margin="190,497,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
     </Grid>
 </Page>
