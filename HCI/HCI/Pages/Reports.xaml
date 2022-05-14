@@ -8,7 +8,25 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Reports">
 
-    <Grid Background="White">
-        <Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10, 10, 0, 0" />
-    </Grid>
+   
+    <WrapPanel Margin="-10,601,10,28" Visibility="Visible">
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="First" FontSize="30"/>
+        </StackPanel>
+    </WrapPanel>
 </Page>

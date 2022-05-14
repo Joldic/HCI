@@ -8,5 +8,8 @@
         Title="Homepage" Height="750" Width="430" HorizontalAlignment="Center">
     <Grid>
         <Frame Source="/Pages/Landing.xaml" NavigationUIVisibility="Hidden"/>
+        <WrapPanel Margin="10,670,10,0">
+            <local:NavButton Text="Drugs" ImageSource="/Images/home.png" NavUri="/Pages/Drugs.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+        </WrapPanel>
     </Grid>
 </Window>

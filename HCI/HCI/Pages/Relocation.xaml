@@ -3,24 +3,48 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:HCI.Pages"
+      xmlns:local="clr-namespace:HCI.Pages" xmlns:n="clr-namespace:HCI"
       mc:Ignorable="d" 
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Relocation">
 
     <Grid Background="White">
         <Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10, 10, 0, 0" />
-        <Label Content="Relocation" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" FontWeight="Heavy" FontSize="20"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Width="224"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,444,0,0" VerticalAlignment="Top" Width="224"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Width="224"/>
-        <DatePicker HorizontalAlignment="Center" Margin="0,539,0,0" VerticalAlignment="Top" Width="224"/>
-        <Button Content="Transfer" HorizontalAlignment="Center" Margin="0,632,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Label Content="Equipment" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
-        <Label Content="Quantity" HorizontalAlignment="Center" Margin="0,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
-        <Label Content="Room from" HorizontalAlignment="Left" Margin="182,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
-        <Label Content="Room to" HorizontalAlignment="Left" Margin="190,404,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
-        <Label Content="Select date" HorizontalAlignment="Left" Margin="190,497,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Relocation" HorizontalAlignment="Left" Margin="156,53,0,0" VerticalAlignment="Top" FontWeight="Heavy" FontSize="20"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,404,0,0" VerticalAlignment="Top" Width="224"/>
+        <ComboBox HorizontalAlignment="Left" Margin="101,148,0,0" VerticalAlignment="Top" Width="224"/>
+        <DatePicker HorizontalAlignment="Left" Margin="100,493,0,0" VerticalAlignment="Top" Width="224"/>
+        <Button Content="Transfer" HorizontalAlignment="Left" Margin="168,540,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Equipment" HorizontalAlignment="Left" Margin="175,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="181,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Room from" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Room to" HorizontalAlignment="Left" Margin="185,375,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+        <Label Content="Select date" HorizontalAlignment="Center" Margin="0,451,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
+
+        <WrapPanel Margin="26,603,-24,-114" >
+            <StackPanel>
+                <n:NavButton Text="Home" ImageSource="/Images/home.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Notifications" ImageSource="/Images/bell.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel Margin="38, 22, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/new-moon.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="44" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
+            </StackPanel>
+        </WrapPanel>
     </Grid>
 </Page>

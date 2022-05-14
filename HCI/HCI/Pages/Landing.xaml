@@ -10,7 +10,7 @@
       Title="Landing">
 
     <Grid Background="White" ButtonBase.Click="Grid_Click">
-        <WrapPanel Margin="60" >
+        <WrapPanel Margin="60,60,60,275" >
             <!--<n:NavButton Text="Accounts" ImageSource="/Images/Accounts.png" NavUri="/Pages/Accounts.xaml" />
             <n:NavButton Text="Bills" ImageSource="/Images/Billing.png" NavUri="/Pages/Bills.xaml"/> -->
             <n:NavButton Text="Employees" ImageSource="/Images/Employees.png" NavUri="/Pages/Employees.xaml" Width="90" Height="111" />
@@ -25,7 +25,36 @@
             <n:NavButton Text="Forms" ImageSource="/Images/form.png" NavUri="/Pages/Form.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
             <!--<n:NavButton Text="Forms" ImageSource="/Images/van.png" NavUri="/Pages/GetNewEquipment.xaml" RenderTransformOrigin="0.849,0.702" Width="90" />
             -->
+
             <n:NavButton Text="Drugs" ImageSource="/Images/medkit.png" NavUri="/Pages/Drugs.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+
         </WrapPanel>
+
+        <WrapPanel Margin="26,602,-32,-122" >
+            <StackPanel>
+                <n:NavButton Text="Home" ImageSource="/Images/home.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Notifications" ImageSource="/Images/bell.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel Margin="38, 22, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/new-moon.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="44" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
+            </StackPanel>
+        </WrapPanel>
+
+
+
     </Grid>
 </Page>

@@ -14,10 +14,13 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
 
-     
 
-            <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}"
+    <Grid>
+        <local1:Frame Name="MainFrame" NavigationUIVisibility="Hidden" >
+        </local1:Frame>
+        <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}"
                        Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+                
 
         <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost" >
             <StackPanel>
@@ -55,6 +58,7 @@
             
         </materialDesign:DialogHost>
 
+  
     </materialDesign:Card>
-    
+    </Grid>
 </Window>

@@ -65,7 +65,8 @@ namespace HCI
             window.Height = 750;
             window.Width = 430;
             window.Show();
-           // this.Visibility = Visibility.Hidden;
+            //this.Visibility = Visibility.Hidden;
+
 
         }
     }
