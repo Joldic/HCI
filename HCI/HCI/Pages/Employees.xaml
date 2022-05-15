@@ -8,7 +8,7 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Employees">
 
-    <Grid Background="White">
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
         <Grid>
             <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
         </Grid>
