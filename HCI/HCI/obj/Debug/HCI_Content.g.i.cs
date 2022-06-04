@@ -8,8 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/arrow-left.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/new-moon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/square.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/allergen.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/appointment.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/doctor.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/drug.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/drugingredient.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/equipment.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/ingredient.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/invaliddrugs.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/manager.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/operations.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/patient.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/patientallergen.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/renovation.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/room.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/roomequipment.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/user.txt")]
 
 

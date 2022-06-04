@@ -23,12 +23,22 @@ namespace HCI.Pages
         public Landing()
         {
             InitializeComponent();
+            DataContext = this;
+            
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            var ClickedButton = e.OriginalSource as NavButton;
-            NavigationService.Navigate(ClickedButton.NavUri);
+            //var ClickedButton = e.OriginalSource as NavButton;
+            //NavigationService.Navigate(ClickedButton.NavUri);
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new MainWindow();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Show();
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

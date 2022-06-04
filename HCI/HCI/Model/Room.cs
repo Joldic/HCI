@@ -13,8 +13,8 @@ namespace Model
         public string Name { get; set; }
         public RoomType Type { get; set; }
         public uint SquareFootage { get; set; }
-
         public Boolean Availability { get; set; }
+
         public Room()
         {
 
@@ -40,14 +40,5 @@ namespace Model
             SquareFootage = squareFootage;
             Availability = availability;
         }
-
- 
-      
-      /// <summary>
-      /// Add a new Appointment in the collection
-      /// </summary>
-      /// <pdGenerated>Default Add</pdGenerated>
-     
-   
    }
 }

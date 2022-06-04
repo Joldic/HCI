@@ -8,7 +8,7 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Renovation">
 
-    <Grid Background="White">
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
         <ComboBox  Background="White" BorderBrush="Black" Name="Room_names" HorizontalAlignment="Left" Margin="119,123,0,0" VerticalAlignment="Top" Width="196">
             <ComboBox.ItemTemplate>
                 <DataTemplate>

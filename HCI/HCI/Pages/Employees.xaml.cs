@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using HCI.Controller;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,26 +24,18 @@ namespace HCI.Pages
     public partial class Employees : Page
     {
         public ObservableCollection<User> UsersList;
+        private UserController _userController;
         public Employees()
         {
             InitializeComponent();
-            User u1 = new User("Nenad", "Joldic", UserType.Manager);
-            User u2 = new User("Dunja", "Bogdanovic", UserType.Secretary);
-            User u3 = new User("Luka", "Lucic", UserType.Doctor);
-            User u4 = new User("Stevan", "Milicic", UserType.Doctor);
-            User u5 = new User("Marko", "Djurdjevic", UserType.Secretary);
+            var app = Application.Current as App;
+            _userController = app.UserController;
+            UsersList = new ObservableCollection<User>(_userController.GetAll().ToList());
 
-            UsersList = new ObservableCollection<User>();
-            UsersList.Add(u1);
-            UsersList.Add(u2);
-            UsersList.Add(u3);
-            UsersList.Add(u4);
-
-            GRD.Items.Add(u1);
-            GRD.Items.Add(u2);
-            GRD.Items.Add(u3);
-            GRD.Items.Add(u4);
-            GRD.Items.Add(u5);
+            for (int i = 0; i < UsersList.Count; i++)
+            {
+                GRD.Items.Add(UsersList[i]);
+            }
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)

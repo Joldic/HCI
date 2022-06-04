@@ -31,9 +31,8 @@ namespace Model
             Type = type;
         }
 
-        public Equipment(uint quantity, string name, EquipmentType type)
+        public Equipment(uint quantity, string name, EquipmentType type) : this(quantity)
         {
-            Quantity = quantity;
             Name = name;
             Type = type;
         }

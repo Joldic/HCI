@@ -63,7 +63,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Homepage.xaml">
+    <Compile Include="Exception\NotFoundException.cs" />
+    <Compile Include="Repository\AllergenRepository.cs" />
+    <Compile Include="Repository\AnamnesisRepository.cs" />
+    <Compile Include="Repository\AppointmentRepository.cs" />
+    <Compile Include="Repository\DoctorRepository.cs" />
+    <Compile Include="Repository\DrugRepository.cs" />
+    <Compile Include="Repository\EquipmentRepository.cs" />
+    <Compile Include="Repository\IngredientRepository.cs" />
+    <Compile Include="Repository\ManagerRepository.cs" />
+    <Compile Include="Repository\PatientRepository.cs" />
+    <Compile Include="Repository\RecipeRepository.cs" />
+    <Compile Include="Repository\RenovationRepository.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
+    <Compile Include="Repository\SecretaryRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Service\AllergenService.cs" />
+    <Compile Include="Service\AnamnesisService.cs" />
+    <Compile Include="Service\AppointmentService.cs" />
+    <Compile Include="Service\DoctorService.cs" />
+    <Compile Include="Service\DrugService.cs" />
+    <Compile Include="Service\EquipmentService.cs" />
+    <Compile Include="Service\IngredientService.cs" />
+    <Compile Include="Service\ManagerService.cs" />
+    <Compile Include="Service\PatientService.cs" />
+    <Compile Include="Service\RecipeService.cs" />
+    <Compile Include="Service\RenovationService.cs" />
+    <Compile Include="Service\RoomService.cs" />
+    <Compile Include="Service\SecretaryService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,8 +104,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Homepage.xaml.cs">
-      <DependentUpon>Homepage.xaml</DependentUpon>
+    <Compile Include="Controller\AllergenController.cs" />
+    <Compile Include="Controller\AnamnesisController.cs" />
+    <Compile Include="Controller\AppointmentController.cs" />
+    <Compile Include="Controller\DoctorController.cs" />
+    <Compile Include="Controller\DrugController.cs" />
+    <Compile Include="Controller\EquipmentController.cs" />
+    <Compile Include="Controller\IngredientController.cs" />
+    <Compile Include="Controller\ManagerController.cs" />
+    <Compile Include="Controller\PatientControler.cs" />
+    <Compile Include="Controller\RecipeController.cs" />
+    <Compile Include="Controller\RenovationController.cs" />
+    <Compile Include="Controller\RoomControler.cs" />
+    <Compile Include="Controller\SecretaryController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -148,13 +191,28 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Allergen.cs" />
+    <Compile Include="Model\Anamnesis.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\Doctor.cs" />
     <Compile Include="Model\Drug.cs" />
+    <Compile Include="Model\DrugIngredientDTO.cs" />
     <Compile Include="Model\Equipment.cs" />
     <Compile Include="Model\EquipmentType.cs" />
+    <Compile Include="Model\Gender.cs" />
+    <Compile Include="Model\Ingredient.cs" />
+    <Compile Include="Model\Manager.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\PatientAllergenDTO.cs" />
+    <Compile Include="Model\Recipe.cs" />
+    <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\RoomEquipmentDTO.cs" />
+    <Compile Include="Model\RoomRenovationDTO.cs" />
     <Compile Include="Model\RoomType.cs" />
+    <Compile Include="Model\Secretary.cs" />
+    <Compile Include="Model\Specialization.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserType.cs" />
     <Compile Include="NavButton.cs" />
     <Compile Include="Pages\Accounts.xaml.cs">
       <DependentUpon>Accounts.xaml</DependentUpon>
@@ -307,6 +365,25 @@
     <Resource Include="Images\square.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\allergen.txt" />
+    <Resource Include="Resources\appointment.txt" />
+    <Resource Include="Resources\doctor.txt" />
+    <Resource Include="Resources\drug.txt" />
+    <Resource Include="Resources\DrugIngredient.txt" />
+    <Resource Include="Resources\equipment.txt" />
+    <Resource Include="Resources\ingredient.txt" />
+    <Resource Include="Resources\InvalidDrugs.txt" />
+    <Resource Include="Resources\manager.txt" />
+    <Resource Include="Resources\operations.txt" />
+    <Resource Include="Resources\patient.txt" />
+    <Resource Include="Resources\PatientAllergen.txt" />
+    <Resource Include="Resources\renovation.txt" />
+    <Resource Include="Resources\room.txt" />
+    <Resource Include="Resources\RoomEquipment.txt" />
+    <Resource Include="Resources\user.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

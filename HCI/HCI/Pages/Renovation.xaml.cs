@@ -38,5 +38,11 @@ namespace HCI.Pages
 
             Room_names.ItemsSource = RoomsList;
         }
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
+        {
+            var ClickedButton = e.OriginalSource as NavButton;
+            NavigationService.Navigate(ClickedButton.NavUri);
+        }
     }
 }

@@ -8,9 +8,9 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Drugs">
 
-    <Grid Background="White">
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
         <Grid>
-            <Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10,10,0,0" />
+            <!--<Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10,10,0,0" />-->
             <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
         </Grid>
         <!--<ListView x:Name="GRD" ItemsSource="{Binding RoomsList}" >
@@ -49,13 +49,13 @@
                             <Border BorderBrush="Orange" Grid.Column="1"  Padding="2, 0" BorderThickness="1, 0, 0, 0">
                                 <StackPanel Margin="5, 5, 5, 5">
                                     <TextBlock Text="{Binding Name}" FontWeight="Heavy"/>
+                                    <TextBlock Text="{Binding Weight}"/>
                                     <TextBlock Text="{Binding Category}"/>
                                     <TextBlock Text="{Binding Quantity}"/>
-                                    <TextBlock Text="{Binding ExpirationDate}"/>
                                 </StackPanel>
                             </Border>
                             <Border Grid.Column="3" >
-                                <Button Width="100" Height="30" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <Button Width="100" Height="30" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Top" Click="DeleteButton_Click">
 
                                 </Button>
                             </Border>

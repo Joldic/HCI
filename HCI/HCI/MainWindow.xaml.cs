@@ -64,7 +64,11 @@ namespace HCI
             window.Source = new Uri("/Pages/Landing.xaml", UriKind.Relative);
             window.Height = 750;
             window.Width = 430;
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             window.Show();
+
+            //this.Close();
+
             //this.Visibility = Visibility.Hidden;
 
 

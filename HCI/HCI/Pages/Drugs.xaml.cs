@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using HCI.Controller;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,28 +24,41 @@ namespace HCI.Pages
     public partial class Drugs : Page
     {
         public ObservableCollection<Drug> DrugsList;
+        private DrugController _drugController;
         public Drugs()
         {
-            DateTime dateTime = DateTime.Now;
+            //DateTime dateTime = DateTime.Now;
             InitializeComponent();
-            Drug r1 = new Drug("bromazepam", "nervs", 15, dateTime);
-            Drug r2 = new Drug("klonazepam", "nervs", 10, dateTime);
-            Drug r3 = new Drug("probiotik", "stomach", 5, dateTime);
-            Drug r4 = new Drug("canesten", "bacteries", 88, dateTime);
-            Drug r5 = new Drug("zync", "supplement", 99, dateTime);
-            DrugsList = new ObservableCollection<Drug>();
-            DrugsList.Add(r1);
-            DrugsList.Add(r2);
-            DrugsList.Add(r3);
-            DrugsList.Add(r4);
-            DrugsList.Add(r5);
+            DataContext = this;
+            var app = Application.Current as App;
+            _drugController = app.DrugController;
 
-
+            DrugsList = new ObservableCollection<Drug>(_drugController.GetAll().ToList());
             //GRD.Items.Add(r1);
             //GRD.Items.Add(r2);
             for (int i = 0; i < DrugsList.Count; i++)
             {
                 GRD.Items.Add(DrugsList[i]);
+            }
+        }
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
+        {
+            var ClickedButton = e.OriginalSource as NavButton;
+            NavigationService.Navigate(ClickedButton.NavUri);
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Drug drug = GRD.SelectedItem as Drug;
+            //_drugController.DeleteDrug(drug.Id);
+
+            for(int i= 0; i < DrugsList.Count; i++)
+            {
+                if(DrugsList[i].Id == drug.Id)
+                {
+                    GRD.Items.Remove(DrugsList[i]);
+                }
             }
         }
     }
