@@ -110,3 +110,5 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Drugs.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Drugs.baml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Login.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Login.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\NewFolder1\Window1.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\NewFolder1\Window1.baml

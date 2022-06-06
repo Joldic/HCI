@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using Controller;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -24,24 +25,15 @@ namespace HCI.Pages
     {
         //public List<Room> RoomsList { get; set; }
         public ObservableCollection<Room> RoomsList { get; set; }
+        private RoomControler _roomController;
         public Rooms()
         {
             InitializeComponent();
-            Room r1 = new Room("soba 200", RoomType.operatingRoom, 15, true);
-            Room r2 = new Room("soba 300", RoomType.operatingRoom, 27, true);
-            Room r3 = new Room("soba 400", RoomType.ordinaryRoom, 35, true);
-            Room r4 = new Room("soba 500", RoomType.relaxationRoom, 47, true);
-            Room r5 = new Room("soba 500", RoomType.operatingRoom, 76, true);
-            RoomsList = new ObservableCollection<Room>();
-            RoomsList.Add(r1);
-            RoomsList.Add(r2);
-            RoomsList.Add(r3);
-            RoomsList.Add(r4);
-            RoomsList.Add(r5);
-            
+            var app = Application.Current as App;
+            _roomController = app.RoomControler;
 
-            //GRD.Items.Add(r1);
-            //GRD.Items.Add(r2);
+            RoomsList = new ObservableCollection<Room>(_roomController.GetAll().ToList());
+
             for(int i=0; i<RoomsList.Count; i++)
             {
                 GRD.Items.Add(RoomsList[i]);
@@ -49,20 +41,12 @@ namespace HCI.Pages
 
         }
 
-        public List<Room> GetRooms()
-        {
-            List<Room> rooms = new List<Room>();
-            Room r1 = new Room("soba 200", RoomType.operatingRoom, 15, true);
-            Room r2 = new Room("soba 300", RoomType.operatingRoom, 27, true);
-            rooms.Add(r1);
-            rooms.Add(r2);
 
-            return rooms;
-        }
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
             var ClickedButton = e.OriginalSource as NavButton;
-            NavigationService.Navigate(ClickedButton.NavUri);
+            if (ClickedButton != null)
+                NavigationService.Navigate(ClickedButton.NavUri);
         }
     }
 }

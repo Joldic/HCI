@@ -29,8 +29,8 @@ namespace HCI.Pages
 
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            //var ClickedButton = e.OriginalSource as NavButton;
-            //NavigationService.Navigate(ClickedButton.NavUri);
+            var ClickedButton = e.OriginalSource as NavButton;
+            NavigationService.Navigate(ClickedButton.NavUri);
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)

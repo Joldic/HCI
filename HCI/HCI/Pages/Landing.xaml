@@ -18,15 +18,15 @@
             <n:NavButton Text="Notes" ImageSource="/Images/Notes.png" NavUri="/Pages/Notes.xaml" />
             <n:NavButton Text="Reports" ImageSource="/Images/Report.png" NavUri="/Pages/Reports.xaml" />
             <n:NavButton Text="Setting" ImageSource="/Images/Settings.png" NavUri="/Pages/Setting.xaml" />-->
-            <n:NavButton Text="Rooms" ImageSource="/Images/room.png" NavUri="/Pages/Rooms.xaml" Width="97" Height="109"/>
-            <n:NavButton Text="Relocation" ImageSource="/Images/relocation.png" NavUri="/Pages/Relocation.xaml" Width="86"/>
+            <n:NavButton Text="Rooms" ImageSource="/Images/hospital-building.png" NavUri="/Pages/Rooms.xaml" Width="97" Height="109"/>
+            <n:NavButton Text="Relocation" ImageSource="/Images/exchange.png" NavUri="/Pages/Relocation.xaml" Width="86"/>
             <n:NavButton Text="Renovation" ImageSource="/Images/renovation.png" NavUri="/Pages/Renovation.xaml" Width="98" />
             <n:NavButton Text="Equipment" ImageSource="/Images/medical-equipment.png" NavUri="/Pages/Equipment.xaml" Width="89" Height="116" />
-            <n:NavButton Text="Forms" ImageSource="/Images/form.png" NavUri="/Pages/Form.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            <n:NavButton Text="Forms" ImageSource="/Images/google-forms.png" NavUri="/Pages/Form.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
             <!--<n:NavButton Text="Forms" ImageSource="/Images/van.png" NavUri="/Pages/GetNewEquipment.xaml" RenderTransformOrigin="0.849,0.702" Width="90" />
             -->
 
-            <n:NavButton Text="Drugs" ImageSource="/Images/medkit.png" NavUri="/Pages/Drugs.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            <n:NavButton Text="Drugs" ImageSource="/Images/medicine.png" NavUri="/Pages/Drugs.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
 
         </WrapPanel>
 
@@ -41,8 +41,7 @@
                 <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
             </StackPanel>
             <StackPanel>
-                <!--<n:NavButton Text="Log out" ImageSource="/Images/logout.png" Command="NavigationCommands.BrowseBack"  RenderTransformOrigin="0.849,0.702" Width="86" />-->
-                <Button Content="Log out" Click="LogoutButton_Click"></Button>
+                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" Command="NavigationCommands.BrowseBack"  RenderTransformOrigin="0.849,0.702" Width="86" />
             </StackPanel>
             <StackPanel Margin="38, 22, 5, 6" >
                 <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />
