@@ -26,6 +26,10 @@ namespace Service
       
         public Room ChangeRoom(Room room)
         {
+            if(room.Name == "")
+            {
+                return null;
+            }
             return _repo.UpdateRoom(room);
         }
       

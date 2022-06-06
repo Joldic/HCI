@@ -44,5 +44,25 @@ namespace HCI.Pages
             if (ClickedButton != null)
                 NavigationService.Navigate(ClickedButton.NavUri);
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            User user = GRD.SelectedItem as User;
+            //_userController.DeleteUser(user.Id);
+
+            for (int i = 0; i < UsersList.Count; i++)
+            {
+                if (UsersList[i].Id == user.Id)
+                {
+                    GRD.Items.Remove(UsersList[i]);
+                }
+            }
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+          
+        }
+
     }
 }

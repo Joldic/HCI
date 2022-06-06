@@ -68,7 +68,7 @@
                             </Border>
 
                             <Border Grid.Column="4">
-                                <Button   Width="50" >
+                                <Button   Width="50" Click="UpdateButton_Click">
                                     <StackPanel>
                                         <Image Source="/Images/edit.png" Height="18" Width="18"/>
                                         <!--<TextBlock>Delete</TextBlock>-->

@@ -22,7 +22,7 @@ namespace HCI.Pages
     /// </summary>
     public partial class Equipment : Page
     {
-        public ObservableCollection<Model.Equipment> RoomsList { get; set; }
+        public ObservableCollection<Model.Equipment> EquipmentList { get; set; }
         private EquipmentController _equipmentController;
 
         public Equipment()
@@ -31,10 +31,10 @@ namespace HCI.Pages
             var app = Application.Current as App;
             _equipmentController = app.EquipmentController;
 
-            RoomsList = new ObservableCollection<Model.Equipment>(_equipmentController.GetAll().ToList());
-            for (int i = 0; i < RoomsList.Count; i++)
+            EquipmentList = new ObservableCollection<Model.Equipment>(_equipmentController.GetAll().ToList());
+            for (int i = 0; i < EquipmentList.Count; i++)
             {
-                GRD.Items.Add(RoomsList[i]);
+                GRD.Items.Add(EquipmentList[i]);
             }
         }
 
@@ -43,6 +43,25 @@ namespace HCI.Pages
             var ClickedButton = e.OriginalSource as NavButton;
             if (ClickedButton != null)
                 NavigationService.Navigate(ClickedButton.NavUri);
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Model.Equipment equipment = GRD.SelectedItem as Model.Equipment;
+            //_equipmentController.DeleteEquipment(equipment.Id);
+
+            for (int i = 0; i < EquipmentList.Count; i++)
+            {
+                if (EquipmentList[i].Id == equipment.Id)
+                {
+                    GRD.Items.Remove(EquipmentList[i]);
+                }
+            }
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

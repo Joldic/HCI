@@ -29,9 +29,10 @@
                         <Grid Width="400" Height="80">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="120"/>
-                                <ColumnDefinition Width="80"/>
-                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition Width="63"/>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="40"/>
 
                             </Grid.ColumnDefinitions>
 
@@ -49,8 +50,23 @@
                                 </StackPanel>
                             </Border>
                             <Border Grid.Column="3" >
-                                <Button Width="100" Height="30" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <!--<Button Width="100" Height="30" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Top">
 
+                                </Button>-->
+
+                                <Button   Width="50" Click="DeleteButton_Click">
+                                    <StackPanel>
+                                        <Image Source="/Images/remove.png" Height="18" Width="18"/>
+                                        <!--<TextBlock>Delete</TextBlock>-->
+                                    </StackPanel>
+                                </Button>
+                            </Border>
+                            <Border Grid.Column="4">
+                                <Button   Width="50" Click="UpdateButton_Click" >
+                                    <StackPanel>
+                                        <Image Source="/Images/edit.png" Height="18" Width="18"/>
+                                        <!--<TextBlock>Delete</TextBlock>-->
+                                    </StackPanel>
                                 </Button>
                             </Border>
 

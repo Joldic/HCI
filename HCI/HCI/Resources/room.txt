@@ -4,4 +4,4 @@
 4;soba 205A;operatingRoom;80;true
 6;update;relaxationRoom;68;true
 9;soba2;ordinaryRoom;33;True
-12;spojene;operatingRoom;13;True
+12;validacija;operatingRoom;14;True

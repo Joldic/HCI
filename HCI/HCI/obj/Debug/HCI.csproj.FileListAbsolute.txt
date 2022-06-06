@@ -112,3 +112,9 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Login.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Login.baml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\NewFolder1\Window1.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\NewFolder1\Window1.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateRoom.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateRoom.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateDrug.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateEquipment.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateDrug.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateEquipment.baml

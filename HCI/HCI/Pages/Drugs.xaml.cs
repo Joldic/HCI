@@ -62,5 +62,9 @@ namespace HCI.Pages
                 }
             }
         }
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

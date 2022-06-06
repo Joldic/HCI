@@ -1,4 +1,5 @@
 ﻿using Controller;
+using HCI.Pages.Dialog;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -48,5 +49,30 @@ namespace HCI.Pages
             if (ClickedButton != null)
                 NavigationService.Navigate(ClickedButton.NavUri);
         }
+
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Room room = GRD.SelectedItem as Room;
+            //_roomController.DeleteRoom(room.Id);
+
+            for (int i = 0; i < RoomsList.Count; i++)
+            {
+                if (RoomsList[i].Id == room.Id)
+                {
+                    GRD.Items.Remove(RoomsList[i]);
+                }
+            }
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Room room = GRD.SelectedItem as Room;
+            //_roomController.DeleteRoom(room.Id);
+
+            var page = new UpdateRoom(room);
+            NavigationService.Navigate(page);
+        }
+
     }
 }

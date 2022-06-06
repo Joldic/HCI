@@ -67,6 +67,15 @@
     <Compile Include="NewFolder1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Dialog\UpdateDrug.xaml.cs">
+      <DependentUpon>UpdateDrug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dialog\UpdateEquipment.xaml.cs">
+      <DependentUpon>UpdateEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dialog\UpdateRoom.xaml.cs">
+      <DependentUpon>UpdateRoom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repository\AllergenRepository.cs" />
     <Compile Include="Repository\AnamnesisRepository.cs" />
     <Compile Include="Repository\AppointmentRepository.cs" />
@@ -137,6 +146,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Bills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Dialog\UpdateDrug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Dialog\UpdateEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Dialog\UpdateRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -412,6 +433,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\remove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
