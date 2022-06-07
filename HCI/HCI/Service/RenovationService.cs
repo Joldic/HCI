@@ -23,6 +23,10 @@ namespace HCI.Service
 
         public RoomRenovationDTO AddRenovation(RoomRenovationDTO dto)
         {
+            if(!(DateTime.Compare(dto.Start, dto.End) < 0))
+            {
+                return null;
+            }
             return _repo.AddRenovation(dto);
         }
 

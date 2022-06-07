@@ -118,3 +118,7 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateDrug.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateEquipment.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateDrug.baml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\UpdateEquipment.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddDrug.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddRoom.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddDrug.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddRoom.baml

@@ -107,6 +107,12 @@ namespace HCI.Pages.Dialog
             roomToUpdate.Type = room_type;
             roomToUpdate.SquareFootage = square_ft;
 
+            //if(room_name == "")
+            //{
+            //    MessageBoxResult result = MessageBox.Show("Invalid input");
+            //    return;
+            //}
+
             if (_roomController.ChangeRoom(roomToUpdate) == null)
             {
                 MessageBoxResult result = MessageBox.Show("Invalid input");

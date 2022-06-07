@@ -1,4 +1,5 @@
 ﻿using HCI.Controller;
+using HCI.Pages.Dialog;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -52,7 +53,7 @@ namespace HCI.Pages
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             Drug drug = GRD.SelectedItem as Drug;
-            //_drugController.DeleteDrug(drug.Id);
+            _drugController.DeleteDrug(drug.Id);
 
             for(int i= 0; i < DrugsList.Count; i++)
             {
@@ -65,6 +66,12 @@ namespace HCI.Pages
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new AddDrug();
+            NavigationService.Navigate(page);
         }
     }
 }

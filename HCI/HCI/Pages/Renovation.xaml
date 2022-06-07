@@ -17,12 +17,12 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         <Label Content="Room" HorizontalAlignment="Left" Margin="66,123,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top" Width="196"/>
-        <DatePicker HorizontalAlignment="Left" Margin="119,227,0,0" VerticalAlignment="Top" Width="196"/>
+        <DatePicker x:Name="DP1" SelectedDateChanged="DP1_SelectedDateChanged" HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top" Width="196"/>
+        <DatePicker x:Name="DP1_Copy" SelectedDateChanged="DP1_SelectedDateChanged_Copy" HorizontalAlignment="Left" Margin="119,299,0,0" VerticalAlignment="Top" Width="196" RenderTransformOrigin="0.487,-0.27"/>
         <Label Content="Start" HorizontalAlignment="Left" Margin="66,173,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
-        <Label Content="End" HorizontalAlignment="Left" Margin="69,227,0,0" FontWeight="Bold" VerticalAlignment="Top"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="157,299,0,0" VerticalAlignment="Top"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="255,299,0,0" VerticalAlignment="Top" Command="NavigationCommands.BrowseBack"/>
+        <Label Content="End" HorizontalAlignment="Left" Margin="66,299,0,0" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.637,3.42"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="156,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.602,2.992" Click="SaveButton_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="245,428,0,0" VerticalAlignment="Top" Command="NavigationCommands.BrowseBack"/>
         <Label Content="Renovation" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.511,0.142"/>
 
 
@@ -49,6 +49,28 @@
                 <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
             </StackPanel>
         </WrapPanel>
+        <ComboBox HorizontalAlignment="Left" Margin="119,241,0,0" Width="196" x:Name="cboTP" VerticalAlignment="Top">
+            <ComboBoxItem Content="08:00"/>
+            <ComboBoxItem Content="08:30"/>
+            <ComboBoxItem Content="09:00"/>
+            <ComboBoxItem Content="09:30"/>
+            <ComboBoxItem Content="10:00"/>
+            <ComboBoxItem Content="10:30"/>
+            <ComboBoxItem Content="11:00"/>
+            <ComboBoxItem Content="11:30"/>
+        </ComboBox>
+        <Label Content="Time" HorizontalAlignment="Left" FontWeight="Bold" Margin="66,241,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="123,365,0,0" VerticalAlignment="Top" Width="196" x:Name="cboTP_Copy">
+            <ComboBoxItem Content="08:00"/>
+            <ComboBoxItem Content="08:30"/>
+            <ComboBoxItem Content="09:00"/>
+            <ComboBoxItem Content="09:30"/>
+            <ComboBoxItem Content="10:00"/>
+            <ComboBoxItem Content="10:30"/>
+            <ComboBoxItem Content="11:00"/>
+            <ComboBoxItem Content="11:30"/>
+        </ComboBox>
+        <Label Content="Time" HorizontalAlignment="Left" FontWeight="Bold" Margin="66,358,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

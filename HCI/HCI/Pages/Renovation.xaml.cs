@@ -1,4 +1,6 @@
-﻿using Model;
+﻿using Controller;
+using HCI.Controller;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,27 +24,97 @@ namespace HCI.Pages
     /// </summary>
     public partial class Renovation : Page
     {
-        public ObservableCollection<Room> RoomsList { get; set; }
+        private RoomControler _roomController;
+        private RenovationController _renovationController;
+        public string t;
+        public string t2;
+        public string d;
+        public string d2;
+        DateTime dt;
+        DateTime dt_end;
+
+        public ObservableCollection<Room> Rooms { get; set; }
         public Renovation()
         {
             InitializeComponent();
-            Room r1 = new Room("soba 200", RoomType.operatingRoom, 15, true);
-            Room r2 = new Room("soba 300", RoomType.operatingRoom, 27, true);
-            Room r3 = new Room("soba 400", RoomType.ordinaryRoom, 35, true);
-            Room r4 = new Room("soba 500", RoomType.relaxationRoom, 47, true);
-            RoomsList = new ObservableCollection<Room>();
-            RoomsList.Add(r1);
-            RoomsList.Add(r2);
-            RoomsList.Add(r3);
-            RoomsList.Add(r4);
+            DataContext = this;
+            var app = Application.Current as App;
+            _roomController = app.RoomControler;
+            _renovationController = app.RenovationController;
 
-            Room_names.ItemsSource = RoomsList;
+            Rooms = new ObservableCollection<Room>(_roomController.GetAll().ToList());
+            Room_names.ItemsSource = Rooms;
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
             var ClickedButton = e.OriginalSource as NavButton;
-            NavigationService.Navigate(ClickedButton.NavUri);
+            if(ClickedButton != null)
+                NavigationService.Navigate(ClickedButton.NavUri);
+        }
+
+        private void DP1_SelectedDateChanged(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cboitem = cboTP.SelectedItem as ComboBoxItem;
+            if(cboitem ==  null)
+            {
+                MessageBoxResult result = MessageBox.Show("Select a time first");
+                d = DP1.Text;
+                return;
+            }
+            if (cboitem.Content != null)
+            {
+                t = cboitem.Content.ToString();
+                //t2 = cboitem2.Content.ToString();
+                d = DP1.Text;
+
+                dt = DateTime.Parse(d + " " + t);
+                // dt_end = DateTime.Parse(d + " " + t2);
+            }
+
+        }
+
+        private void DP1_SelectedDateChanged_Copy(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cboitem = cboTP_Copy.SelectedItem as ComboBoxItem;
+            if (cboitem == null)
+            {
+                MessageBoxResult result = MessageBox.Show("Select a time first");
+                d2 = DP1_Copy.Text;
+                return;
+
+            }
+            if (cboitem.Content != null)
+            {
+                t2 = cboitem.Content.ToString();
+                //t2 = cboitem2.Content.ToString();
+                d2 = DP1_Copy.Text;
+
+                dt_end = DateTime.Parse(d2 + " " + t2);
+                // dt_end = DateTime.Parse(d + " " + t2);
+            }
+
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Room roomItem = Room_names.SelectedItem as Room;
+            if(roomItem == null)
+            {
+                MessageBoxResult r = MessageBox.Show("Select room");
+                return;
+            }
+            DateTime date_begin = dt;
+            DateTime date_end = dt_end;
+
+            RoomRenovationDTO dto = new RoomRenovationDTO(roomItem.Id, date_begin, date_end);
+
+            if (_renovationController.AddRenovation(dto) == null)
+            {
+                MessageBoxResult re = MessageBox.Show("End date is before start date enter again");
+                return;
+            }
+            MessageBoxResult result = MessageBox.Show("Uspesno zakazano renoviranje");
         }
     }
 }

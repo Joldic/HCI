@@ -67,6 +67,12 @@
     <Compile Include="NewFolder1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Dialog\AddDrug.xaml.cs">
+      <DependentUpon>AddDrug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dialog\AddRoom.xaml.cs">
+      <DependentUpon>AddRoom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dialog\UpdateDrug.xaml.cs">
       <DependentUpon>UpdateDrug.xaml</DependentUpon>
     </Compile>
@@ -146,6 +152,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Bills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Dialog\AddDrug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Dialog\AddRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
