@@ -68,6 +68,13 @@ namespace HCI.Pages
 
         }
 
+        private void IngredientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var drug = GRD.SelectedItem as Drug;
+            var page = new Ingredients(drug);
+            NavigationService.Navigate(page);
+        }
+
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             var page = new AddDrug();

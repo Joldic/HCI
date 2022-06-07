@@ -6,3 +6,7 @@
 5;3;2;azot
 6;5;1;natrijum
 7;5;2;azot
+8;1;4;laktoza
+9;7;1;natrijum
+10;7;2;azot
+11;7;3;ugljenik

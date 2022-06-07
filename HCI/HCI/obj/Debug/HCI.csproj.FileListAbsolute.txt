@@ -122,3 +122,7 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddDrug.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddRoom.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddDrug.baml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddRoom.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Ingredients.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Ingredients.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddIngredient.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Dialog\AddIngredient.baml

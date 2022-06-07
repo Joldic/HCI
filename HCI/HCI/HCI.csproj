@@ -70,6 +70,9 @@
     <Compile Include="Pages\Dialog\AddDrug.xaml.cs">
       <DependentUpon>AddDrug.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Dialog\AddIngredient.xaml.cs">
+      <DependentUpon>AddIngredient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dialog\AddRoom.xaml.cs">
       <DependentUpon>AddRoom.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
     </Compile>
     <Compile Include="Pages\Dialog\UpdateRoom.xaml.cs">
       <DependentUpon>UpdateRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ingredients.xaml.cs">
+      <DependentUpon>Ingredients.xaml</DependentUpon>
     </Compile>
     <Compile Include="Repository\AllergenRepository.cs" />
     <Compile Include="Repository\AnamnesisRepository.cs" />
@@ -159,6 +165,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Dialog\AddIngredient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Dialog\AddRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\GetNewEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Ingredients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -452,6 +466,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bowl.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
