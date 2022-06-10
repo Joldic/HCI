@@ -130,3 +130,14 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Merge.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Separation.g.cs
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Merge.baml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\Separation.baml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocIO.Base.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocToPdfConverter.Base.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.OfficeChart.Base.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Pdf.Base.dll
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocIO.Base.xml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocToPdfConverter.Base.xml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.OfficeChart.Base.xml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Pdf.Base.xml

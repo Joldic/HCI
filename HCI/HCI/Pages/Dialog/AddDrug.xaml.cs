@@ -1,4 +1,5 @@
 ﻿using HCI.Controller;
+using HCI.ViewModel;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace HCI.Pages.Dialog
         public AddDrug()
         {
             InitializeComponent();
+            //this.DataContext = vm;
             var app = Application.Current as App;
             _drugController = app.DrugController;
             DataContext = this;

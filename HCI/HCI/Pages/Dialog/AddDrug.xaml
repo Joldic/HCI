@@ -45,7 +45,8 @@
         <Label Content="Category" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Quantity" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,389,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Add drug" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,35,0,0" VerticalAlignment="Top"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="245,496,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+        <Button Content="Add" Command="{Binding SubmitCommand}" HorizontalAlignment="Left" Margin="245,496,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="345,496,0,0" VerticalAlignment="Top" Command="{Binding CancelCommand}"/>
 
 
     </Grid>

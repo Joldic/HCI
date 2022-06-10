@@ -1,5 +1,6 @@
 ﻿using HCI.Controller;
 using HCI.Pages.Dialog;
+using HCI.ViewModel;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -31,16 +32,18 @@ namespace HCI.Pages
             //DateTime dateTime = DateTime.Now;
             InitializeComponent();
             DataContext = this;
+            //this.DataContext = new DrugListingViewModel();
             var app = Application.Current as App;
             _drugController = app.DrugController;
 
             DrugsList = new ObservableCollection<Drug>(_drugController.GetAll().ToList());
             //GRD.Items.Add(r1);
             //GRD.Items.Add(r2);
-            for (int i = 0; i < DrugsList.Count; i++)
-            {
-                GRD.Items.Add(DrugsList[i]);
-            }
+            //for (int i = 0; i < DrugsList.Count; i++)
+            //{
+            //    GRD.Items.Add(DrugsList[i]);
+            //}
+            GRD.ItemsSource = DrugsList;
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
@@ -55,11 +58,11 @@ namespace HCI.Pages
             Drug drug = GRD.SelectedItem as Drug;
             _drugController.DeleteDrug(drug.Id);
 
-            for(int i= 0; i < DrugsList.Count; i++)
+            for (int i = 0; i < DrugsList.Count; i++)
             {
-                if(DrugsList[i].Id == drug.Id)
+                if (DrugsList[i].Id == drug.Id)
                 {
-                    GRD.Items.Remove(DrugsList[i]);
+                     GRD.Items.Remove(DrugsList[i]);
                 }
             }
         }
@@ -77,6 +80,8 @@ namespace HCI.Pages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
+            //AddDrugViewModel vm = new AddDrugViewModel();
+
             var page = new AddDrug();
             NavigationService.Navigate(page);
         }

@@ -12,7 +12,7 @@
         <Grid>
             <!--<Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10,10,0,0" />-->
             <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
-            <Button  HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="53" Height="29" Click="AddButton_Click">
+            <Button  HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="53" Height="29" Click="AddButton_Click" Command="{Binding AddDrugCommand}">
                 <StackPanel>
                     <Image Source="/Images/add.png" Height="18" Width="18"/>
                 </StackPanel>
@@ -29,11 +29,16 @@
             </ListView.ItemTemplate>
         </ListView>-->
         <Grid Margin="5,110,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44*"/>
+                <ColumnDefinition Width="381*"/>
+            </Grid.ColumnDefinitions>
             <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="116*"/>
                 <ColumnDefinition Width="309*"/>
             </Grid.ColumnDefinitions>-->
-            <ListView x:Name="GRD" ItemsSource="{Binding DrugsList}" Grid.ColumnSpan="2"  Margin="5,0,5,177">
+            <!--<ListView x:Name="GRD" ItemsSource="{Binding DrugsList}" Grid.ColumnSpan="2"  Margin="5,0,5,177">-->
+            <ListView x:Name="GRD" ItemsSource="{Binding Drugs}" Grid.ColumnSpan="2"  Margin="5,0,5,177">
                 <ListView.ItemTemplate >
                     <DataTemplate>
                         <Grid Width="400" Height="80">
@@ -64,7 +69,7 @@
                                 <!--<Button Width="100" Height="30" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Top" Click="DeleteButton_Click">
 
                                 </Button>-->
-                                <Button   Width="50" Click="DeleteButton_Click">
+                                <Button   Width="50" Click="DeleteButton_Click" Command="{Binding DeleteDrugCommand}">
                                     <StackPanel>
                                         <Image Source="/Images/remove.png" Height="18" Width="18"/>
                                         <!--<TextBlock>Delete</TextBlock>-->
@@ -93,7 +98,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <WrapPanel Margin="26,476,-24,17" >
+            <WrapPanel Margin="26,476,-24,17" Grid.ColumnSpan="2" >
                 <StackPanel>
                     <n:NavButton Text="Home" ImageSource="/Images/home.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
                 </StackPanel>

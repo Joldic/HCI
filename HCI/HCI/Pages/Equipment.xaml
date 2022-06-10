@@ -12,6 +12,7 @@
         <Grid>
             <!--<Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10,10,0,0" />-->
             <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
+            <Button Content="Report" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" Width="79" Click="ReportButton_Click"/>
         </Grid>
         <!--<ListView x:Name="GRD" ItemsSource="{Binding RoomsList}" >
             <ListView.ItemTemplate>
