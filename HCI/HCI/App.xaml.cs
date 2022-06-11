@@ -2,6 +2,9 @@
 using HCI.Controller;
 using HCI.Repository;
 using HCI.Service;
+using projekat.Controller;
+using projekat.Repository;
+using projekat.Service;
 using Repository;
 using Service;
 using System;
@@ -61,7 +64,7 @@ namespace HCI
 
         public RenovationController RenovationController { get; set; }
 
-        //public FormController FormController { get; set; }
+        public FormController FormController { get; set; }
 
         public App()
         {
@@ -80,7 +83,7 @@ namespace HCI
             var drugRepo = new DrugRepository(DRUG_FILE, CSV_DELIMITER, DATETIME_FORMAT);
             var ingredientRepo = new IngredientRepository(INGREDIENT_FILE, CSV_DELIMITER, DATETIME_FORMAT);
             var renovationRepo = new RenovationRepository(RENOVATION_FILE, CSV_DELIMITER);
-            //var formRepo = new FormRepository(FORM_FILE, CSV_DELIMITER);
+            var formRepo = new FormRepository(FORM_FILE, CSV_DELIMITER);
 
             //var secretaryService = new SecretaryService(secretaryRepo);
             var appointmentService = new AppointmentService(appointmentRepo);
@@ -94,7 +97,7 @@ namespace HCI
             var drugService = new DrugService(drugRepo);
             var ingredientService = new IngredientService(ingredientRepo);
             var renovationService = new RenovationService(renovationRepo);
-            //var formService = new FormService(formRepo);
+            var formService = new FormService(formRepo);
 
             //SecretaryController = new SecretaryController(secretaryService);
             AppointmentController = new AppointmentController(appointmentService);
@@ -108,7 +111,7 @@ namespace HCI
             DrugController = new DrugController(drugService);
             IngredientController = new IngredientController(ingredientService);
             RenovationController = new RenovationController(renovationService);
-            //FormController = new FormController(formService);
+            FormController = new FormController(formService);
         }
     }
 }

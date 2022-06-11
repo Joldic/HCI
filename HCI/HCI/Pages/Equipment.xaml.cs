@@ -41,9 +41,37 @@ namespace HCI.Pages
             _equipmentController = app.EquipmentController;
 
             EquipmentList = new ObservableCollection<Model.Equipment>(_equipmentController.GetAll().ToList());
-            for (int i = 0; i < EquipmentList.Count; i++)
+ 
+
+            GRD.ItemsSource = EquipmentList;
+
+            //FilterBy.ItemsSource = typeof(Model.Equipment).GetProperties().Select((o) => o.Name);
+
+            GRD.Items.Filter = NameFilter;
+
+        }
+
+        public Predicate<object> GetFilter()
+        {
+            return NameFilter;
+        }
+   
+        private bool NameFilter(object obj)
+        {
+            var FilterObj = obj as Model.Equipment;
+
+            return FilterObj.Name.Contains(FilterTextbox.Text);
+        }
+
+        private void FilterTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(FilterTextbox.Text == null)
             {
-                GRD.Items.Add(EquipmentList[i]);
+                GRD.Items.Filter = null;
+            }
+            else
+            {
+                GRD.Items.Filter = GetFilter();
             }
         }
 
@@ -92,8 +120,6 @@ namespace HCI.Pages
                 PdfFont font1 =  new PdfStandardFont(PdfFontFamily.Helvetica, 20);
                 PdfFont font2 =  new PdfStandardFont(PdfFontFamily.Helvetica, 15);
                 string header = "Hospital";
-                //PdfImage image = PdfImage.FromFile(@"..\..\..\heart.jpg");
-                //graphics.DrawImage(image, 165, 0);
                 graphics.DrawString(header, font1, PdfBrushes.Black,new PointF(200, 0 ));
                 string textPDF = "Info about equipment";
                 graphics.DrawString(textPDF, font2, PdfBrushes.Black, new PointF(200, 75));
@@ -109,30 +135,17 @@ namespace HCI.Pages
                 pdfTable.DataSource = table;
                 pdfTable.Style.ShowHeader = true;
 
-                //doc.Save(_projectPath + REPORT_FILE);
+
                 pdfTable.Draw(page, new PointF(0, 100));
-                //doc.Save("ViewerPreference.pdf");
+
                 doc.Save(@"C:\\Users\\joldi\\Desktop\\HCI\\HCI\\HCI\\HCI\\Reports\\Report.pdf");
                 doc.Close(true);
 
-                //Launching the Pdf file.
-                //("ViewerPreference.pdf");
-                //doc.Close(true);
-                //PdfLightTable pdfLightTable = new PdfLightTable;
-                //DataTable table = new DataTable();
-                //table.Columns.Add("Date");
-                //table.Columns.Add("Room Name");
-                //table.Columns.Add("Doctor");
-                //List<Occupation> occupations = FindAllOccupationsByDate(dateTime);
-                //foreach (Occupation o in occupations)
-                //{
-                //    table.Rows.Add(new string[] { o.}
-                //}
-                //PdfLightTable.DataSource = table;
-                //PdfLightTable.Style.ShowHeader = true;
 
 
             }
         }
+
+    
     }
 }

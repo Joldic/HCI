@@ -4,11 +4,101 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HCI.Pages"
+      xmlns:n="clr-namespace:HCI"
       mc:Ignorable="d" 
       d:DesignHeight="750" d:DesignWidth="430"
       Title="Form">
 
-    <Grid>
-        
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
+        <Grid>
+            <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
+        </Grid>
+        <!--<ListView x:Name="GRD" ItemsSource="{Binding RoomsList}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" Margin="20, 0"/>
+                        <TextBlock Text="{Binding SquareFootage}" Margin="20, 0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <Grid Margin="5, 110, 0, 0">
+            <!--<ListView x:Name="GRD" ItemsSource="{Binding UsersList}" Margin="0,0,0,177">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid Width="400" Height="80">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition Width="63"/>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="40"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Grid >
+                                <Grid.Background>
+                                    <ImageBrush ImageSource="/Images/Employees.png"/>
+                                </Grid.Background>
+
+                            </Grid>
+                            <Border BorderBrush="Orange" Grid.Column="1"  Padding="2, 0" BorderThickness="1, 0, 0, 0">
+                                <StackPanel Margin="5, 5, 5, 5">
+                                    <TextBlock Text="{Binding Name}" />
+                                    <TextBlock Text="{Binding Surname}"/>
+                                    <TextBlock Text="{Binding Type}" FontWeight="Heavy"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            <DataGrid  x:Name="DataGridXAML" ItemsSource="{Binding Data}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="340" Height="214" Margin="0,145,0,0">
+                <!-- Font Color / Style of Column Headings-->
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}" >
+                        <Setter Property="Background" Value="Turquoise"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="BorderThickness" Value="0, 0 , 1 ,2"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+
+                    </Style>
+                </DataGrid.Resources>
+                <!-- Column Header Text & Bindings -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="70"/>
+                    <DataGridTextColumn Header="Form Id" Binding="{Binding FormId}" Width="70"/>
+                    <DataGridTextColumn Header="Grade" Binding="{Binding Grade}" Width="102"/>
+                    <DataGridTextColumn Header="Patient Id" Binding="{Binding PatientId}" Width="100"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <WrapPanel Margin="26,491,-10,13" >
+                <StackPanel>
+                    <n:NavButton Text="Home" ImageSource="/Images/home.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+                </StackPanel>
+                <StackPanel>
+                    <n:NavButton Text="Notifications" ImageSource="/Images/bell.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+                </StackPanel>
+                <StackPanel>
+                    <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+                </StackPanel>
+                <StackPanel>
+                    <n:NavButton Text="Log out" ImageSource="/Images/logout.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+                </StackPanel>
+                <StackPanel Margin="38, 22, 5, 6" >
+                    <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />
+                </StackPanel>
+                <StackPanel Margin="88, 20, 5, 6" >
+                    <n:NavButton Text="Log out" ImageSource="/Images/new-moon.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="44" />
+                </StackPanel>
+                <StackPanel Margin="88, 20, 5, 6" >
+                    <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
+                </StackPanel>
+            </WrapPanel>
+            <Label Content="Forms About Hospital" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" Margin="0,48,0,0" VerticalAlignment="Top"/>
+        </Grid>
     </Grid>
 </Page>

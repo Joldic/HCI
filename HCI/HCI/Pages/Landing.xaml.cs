@@ -40,5 +40,6 @@ namespace HCI.Pages
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
+
     }
 }

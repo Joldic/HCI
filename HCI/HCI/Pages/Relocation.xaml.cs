@@ -48,9 +48,36 @@ namespace HCI.Pages
             Room_to.ItemsSource = room_names;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
+            Room room_from = Room_from.SelectedItem as Room;
+            Room room_to = Room_to.SelectedItem as Room;
 
+            //treba da napravim metodu koja ce da vrati iz RoomEquipment.txt RoomEquipmentDTO po id-u sobe i id ili imena equipmenta
+            RoomEquipmentDTO from = _equipmentController.GetByRoomIdAndEquipmentName(room_from.Id, name);
+            RoomEquipmentDTO to = _equipmentController.GetByRoomIdAndEquipmentName(room_to.Id, name);
+
+            if (from.Quantity - quantity >= 0)
+            {
+                from.Quantity -= quantity;
+                to.Quantity += quantity;
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Lower quantity");
+                return;
+            }
+
+            // sada treba da upisem u fajl RoomEquipment.txt promene
+
+            if (_equipmentController.SaveChangesToFile(from) & _equipmentController.SaveChangesToFile(to))
+            {
+                MessageBoxResult result = MessageBox.Show("Uspesno prebacivanje");
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Neuspesno prebacivanje");
+            }
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
@@ -60,12 +87,22 @@ namespace HCI.Pages
                 NavigationService.Navigate(ClickedButton.NavUri);
         }
 
-        private void ShowButton_Click(object sender, RoutedEventArgs e)
+    
+
+        private void quantity_tb_TextChanged(object sender, TextChangedEventArgs e)
         {
             GRD.Items.Clear();
             var eq = Equipment_name_combo.SelectedItem as Model.Equipment;
-            name = eq.Name;
-            quantity = uint.Parse(quantity_tb.Text);
+            if(eq != null)
+                name = eq.Name;
+            try
+            {
+                quantity = uint.Parse(quantity_tb.Text);
+            }
+            catch
+            {
+                GRD.Items.Clear();
+            }
             IList<RoomEquipmentDTO> temp = new List<RoomEquipmentDTO>();
 
             IEnumerable<RoomEquipmentDTO> room_equipment_list = _equipmentController.GetAllRoomAndEquipment();
@@ -86,7 +123,7 @@ namespace HCI.Pages
             {
                 GRD.Items.Add(Data[i]);
             }
+            GRD.Items.Add(new RoomEquipmentDTO());
         }
-
     }
 }

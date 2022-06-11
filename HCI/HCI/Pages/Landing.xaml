@@ -10,7 +10,7 @@
       Title="Landing">
 
     <Grid Background="White" ButtonBase.Click="Grid_Click">
-        <WrapPanel Margin="60,60,60,275" >
+        <WrapPanel Margin="60,60,60,220" >
             <!--<n:NavButton Text="Accounts" ImageSource="/Images/Accounts.png" NavUri="/Pages/Accounts.xaml" />
             <n:NavButton Text="Bills" ImageSource="/Images/Billing.png" NavUri="/Pages/Bills.xaml"/> -->
             <n:NavButton Text="Employees" ImageSource="/Images/Employees.png" NavUri="/Pages/Employees.xaml" Width="90" Height="111" />
@@ -22,13 +22,14 @@
             <n:NavButton Text="Relocation" ImageSource="/Images/exchange.png" NavUri="/Pages/Relocation.xaml" Width="86"/>
             <n:NavButton Text="Renovation" ImageSource="/Images/renovation.png" NavUri="/Pages/Renovation.xaml" Width="98" />
             <n:NavButton Text="Equipment" ImageSource="/Images/medical-equipment.png" NavUri="/Pages/Equipment.xaml" Width="89" Height="116" />
-            <n:NavButton Text="Forms" ImageSource="/Images/google-forms.png" NavUri="/Pages/Form.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            <n:NavButton Text="Hospital Forms" ImageSource="/Images/google-forms.png" NavUri="/Pages/Form.xaml" RenderTransformOrigin="0.849,0.702" Width="86"  />
+            <n:NavButton Text="Doctor Forms" ImageSource="/Images/google-forms.png" NavUri="/Pages/DoctorForm.xaml" RenderTransformOrigin="0.849,0.702" Width="86" Height="89" />
             <!--<n:NavButton Text="Forms" ImageSource="/Images/van.png" NavUri="/Pages/GetNewEquipment.xaml" RenderTransformOrigin="0.849,0.702" Width="90" />
             -->
 
             <n:NavButton Text="Drugs" ImageSource="/Images/medicine.png" NavUri="/Pages/Drugs.xaml" RenderTransformOrigin="0.849,0.702" Width="90" />
             <n:NavButton Text="Merge" ImageSource="/Images/diagrams.png" NavUri="/Pages/Merge.xaml"  RenderTransformOrigin="0.849,0.702" Width="91" />
-            <n:NavButton Text="Separation" ImageSource="/Images/separation.png" NavUri="/Pages/Separation.xaml" RenderTransformOrigin="0.849,0.702" Width="101" />
+            <n:NavButton Text="Separation" ImageSource="/Images/separation.png" NavUri="/Pages/Separation.xaml" RenderTransformOrigin="0.849,0.702" Width="91" Height="92" />
 
         </WrapPanel>
 

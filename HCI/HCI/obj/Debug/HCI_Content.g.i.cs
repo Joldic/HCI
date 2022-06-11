@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/diagrams.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/separation.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/formdoctor.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/formhospital.txt")]
 
 

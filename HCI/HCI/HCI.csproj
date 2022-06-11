@@ -87,7 +87,10 @@
     <Compile Include="Commands\NavigateCommand.cs" />
     <Compile Include="Commands\RelayCommands.cs" />
     <Compile Include="Commands\SubmitDrugCommand.cs" />
+    <Compile Include="Controller\FormController.cs" />
     <Compile Include="Exception\NotFoundException.cs" />
+    <Compile Include="Model\FormDoctorDTO.cs" />
+    <Compile Include="Model\FormHospitalDTO.cs" />
     <Compile Include="NewFolder1\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,9 @@
     <Compile Include="Pages\Dialog\UpdateRoom.xaml.cs">
       <DependentUpon>UpdateRoom.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DoctorForm.xaml.cs">
+      <DependentUpon>DoctorForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Ingredients.xaml.cs">
       <DependentUpon>Ingredients.xaml</DependentUpon>
     </Compile>
@@ -124,6 +130,7 @@
     <Compile Include="Repository\DoctorRepository.cs" />
     <Compile Include="Repository\DrugRepository.cs" />
     <Compile Include="Repository\EquipmentRepository.cs" />
+    <Compile Include="Repository\FormRepository.cs" />
     <Compile Include="Repository\IngredientRepository.cs" />
     <Compile Include="Repository\ManagerRepository.cs" />
     <Compile Include="Repository\PatientRepository.cs" />
@@ -138,6 +145,7 @@
     <Compile Include="Service\DoctorService.cs" />
     <Compile Include="Service\DrugService.cs" />
     <Compile Include="Service\EquipmentService.cs" />
+    <Compile Include="Service\FormService.cs" />
     <Compile Include="Service\IngredientService.cs" />
     <Compile Include="Service\ManagerService.cs" />
     <Compile Include="Service\PatientService.cs" />
@@ -216,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Dialog\UpdateRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DoctorForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -526,6 +538,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FormDoctor.txt" />
+    <Resource Include="Resources\FormHospital.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

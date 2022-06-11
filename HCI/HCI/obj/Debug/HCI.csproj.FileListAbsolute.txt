@@ -141,3 +141,5 @@ C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocIO.Base.xml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.DocToPdfConverter.Base.xml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.OfficeChart.Base.xml
 C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\bin\Debug\Syncfusion.Pdf.Base.xml
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\DoctorForm.g.cs
+C:\Users\joldi\Desktop\HCI\HCI\HCI\HCI\obj\Debug\Pages\DoctorForm.baml

@@ -3,5 +3,6 @@
 3;soba 100A;relaxationRoom;78;true
 4;soba 205A;operatingRoom;80;true
 6;update;relaxationRoom;68;true
-9;soba2;ordinaryRoom;33;True
 12;validacija;operatingRoom;14;True
+14;soba2 B;ordinaryRoom;16;True
+15;soba2 A;ordinaryRoom;16;True
