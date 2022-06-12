@@ -36,17 +36,18 @@
                 <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
             </StackPanel>
         </WrapPanel>
-        <TextBox Name="name_tb" HorizontalAlignment="Center" Margin="0,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="266"/>
-        <TextBox Name="weight_tb" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="266"/>
-        <TextBox Name="category_tb" HorizontalAlignment="Center" Margin="0,337,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="266"/>
-        <TextBox Name="quantity_tb" HorizontalAlignment="Center" Margin="0,436,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="266"/>
+        <TextBox Name="name_tb" HorizontalAlignment="Center" Margin="0,138,0,0" TextWrapping="Wrap" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="266"/>
+        <TextBox Name="weight_tb" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" Text="{Binding Path=Weight}" VerticalAlignment="Top" Width="266"/>
+        <TextBox Name="category_tb" HorizontalAlignment="Center" Margin="0,337,0,0" TextWrapping="Wrap" Text="{Binding Path=Category}" VerticalAlignment="Top" Width="266"/>
+        <TextBox Name="quantity_tb" HorizontalAlignment="Center" Margin="0,436,0,0" TextWrapping="Wrap" Text="{Binding Path=Quantity}" VerticalAlignment="Top" Width="266"/>
         <Label Content="Name" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Weight" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Category" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Quantity" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,389,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
         <Label Content="Add drug" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,35,0,0" VerticalAlignment="Top"/>
-        <Button Content="Add" Command="{Binding SubmitCommand}" HorizontalAlignment="Left" Margin="245,496,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+        <Button Name="AddButton" Content="Add" Command="{Binding SubmitCommand}" HorizontalAlignment="Left" Margin="245,496,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="345,496,0,0" VerticalAlignment="Top" Command="{Binding CancelCommand}"/>
+        <Button Content="Demo" HorizontalAlignment="Left" Margin="101,496,0,0" VerticalAlignment="Top" Click="DemoButton_Click"/>
 
 
     </Grid>

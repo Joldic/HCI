@@ -139,6 +139,9 @@ namespace HCI.Pages
                 pdfTable.Draw(page, new PointF(0, 100));
 
                 doc.Save(@"C:\\Users\\joldi\\Desktop\\HCI\\HCI\\HCI\\HCI\\Reports\\Report.pdf");
+
+                string filename = @"C:\\Users\\joldi\\Desktop\\HCI\\HCI\\HCI\\HCI\\Reports\\Report.pdf";
+                System.Diagnostics.Process.Start(filename);
                 doc.Close(true);
 
 

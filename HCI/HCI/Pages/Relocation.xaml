@@ -64,7 +64,7 @@
                 <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
             </StackPanel>
         </WrapPanel>
-        <ListView x:Name="GRD"  Width ="250" Height="170" Margin="101,180,79,415">
+        <ListView x:Name="GRD" Width ="250" Height="170"   Margin="101,180,79,415">
             <!--<ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -72,20 +72,18 @@
             </ListView.View>-->
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="250" Height="47" >
+                    <Grid Width="250" Height="37" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"/>
                             <ColumnDefinition Width="150"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="47"/>
-                        </Grid.RowDefinitions>
-                        <Border Grid.Column="1" Grid.Row="0">
-                            <StackPanel Height="170" Margin="0, 0, 0, 0" >
+                        <!--<Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                        </Grid.RowDefinitions>-->
+                        <Border Grid.Column="1" >
+                            <StackPanel Margin="0, 0, 0, 0" >
                                 <TextBlock Text="{Binding RoomName}" FontWeight="Heavy"/>
-                                <!--<TextBlock Text="{Binding SquareFootage}"/>-->
-                                <!--<TextBlock Text="{Binding Type}"/>-->
-                            <TextBlock Text="{Binding Quantity}"/>
+                                <TextBlock Text="{Binding Quantity}"/>
                             </StackPanel>
                         </Border>
                     </Grid>
