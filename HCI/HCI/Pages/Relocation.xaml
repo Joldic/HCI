@@ -11,7 +11,7 @@
     <Grid Background="White" ButtonBase.Click="Grid_Click">
         <!--<Button Height="25" Padding="5" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Back" Command="NavigationCommands.BrowseBack" Margin="10, 10, 0, 0" />-->
         <Label Content="Relocation" HorizontalAlignment="Left" Margin="153,10,0,0" VerticalAlignment="Top" FontWeight="Heavy" FontSize="20"/>
-        <TextBox Name="quantity_tb" HorizontalAlignment="Left" TextChanged="quantity_tb_TextChanged" Margin="101,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <TextBox Name="quantity_tb" HorizontalAlignment="Left" TextChanged="quantity_tb_TextChanged" Margin="101,150,0,0" TextWrapping="Wrap" Text="{Binding Path=Quantity}" VerticalAlignment="Top" Width="224"/>
         <ComboBox Name="Room_from" HorizontalAlignment="Left" Margin="100,375,0,0" VerticalAlignment="Top" Width="224">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -26,15 +26,15 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox Name="Equipment_name_combo" HorizontalAlignment="Left" Margin="100,82,0,0" VerticalAlignment="Top" Width="224">
+        <ComboBox Name="Equipment_name_combo"  HorizontalAlignment="Left" Margin="100,82,0,0" VerticalAlignment="Top" Width="224">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Name}" />
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <DatePicker HorizontalAlignment="Left" Margin="100,493,0,0" VerticalAlignment="Top" Width="224"/>
-        <Button Content="Transfer" HorizontalAlignment="Left" Margin="168,540,0,0" VerticalAlignment="Top" Click="TransferButton_Click"/>
+        <DatePicker Name="Date_picker" HorizontalAlignment="Left" Margin="100,493,0,0" VerticalAlignment="Top" Width="224"/>
+        <Button Name="Transfer" Content="Transfer" HorizontalAlignment="Left" Margin="168,540,0,0" VerticalAlignment="Top" Click="TransferButton_Click"/>
         <Label Content="Equipment" HorizontalAlignment="Left" Margin="171,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
         <Label Content="Quantity" HorizontalAlignment="Left" Margin="177,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
         <Label Content="Room from" HorizontalAlignment="Left" Margin="177,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.117" FontWeight="Bold"/>
@@ -90,5 +90,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Content="Demo" HorizontalAlignment="Left" Margin="26,540,0,0" VerticalAlignment="Top" Click="DemoButton_Click"/>
     </Grid>
 </Page>

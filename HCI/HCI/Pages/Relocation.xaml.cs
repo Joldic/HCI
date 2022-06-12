@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace HCI.Pages
 {
@@ -31,6 +32,10 @@ namespace HCI.Pages
         private EquipmentController _equipmentController;
         public ObservableCollection<Model.Equipment> equipment_names { get; set; }
         public ObservableCollection<Room> room_names { get; set; }
+
+        public DispatcherTimer DemoTimer { get; set; } = new DispatcherTimer();
+
+        public int Phase = 0;
         public Relocation()
         {
             InitializeComponent();
@@ -46,6 +51,15 @@ namespace HCI.Pages
             Equipment_name_combo.ItemsSource = equipment_names;
             Room_from.ItemsSource = room_names;
             Room_to.ItemsSource = room_names;
+        }
+
+        public uint Quantity
+        {
+            get => quantity;
+            set
+            {
+                quantity = value;
+            }
         }
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
@@ -124,6 +138,75 @@ namespace HCI.Pages
                 GRD.Items.Add(Data[i]);
             }
             GRD.Items.Add(new RoomEquipmentDTO());
+        }
+
+        private void DemoButton_Click(object sender, RoutedEventArgs e)
+        {
+            DemoTimer.Interval = new TimeSpan(0, 0, 1);
+            DemoTimer.Tick += new EventHandler(demoTimer_Tick);
+            DemoTimer.IsEnabled = true;
+            Phase = 0;
+        }
+
+        private void demoTimer_Tick(object sender, EventArgs e)
+        {
+            switch (Phase)
+            {
+                case 0:
+                    Equipment_name_combo.IsDropDownOpen = true;
+                    //Equipment_name_combo.Focus();
+                    Phase++;
+                    break;
+                case 1:
+                    Equipment_name_combo.SelectedIndex = 0;
+                    Phase++;
+                    break;
+                case 2:
+                    quantity_tb.Focus();
+                    Phase++;
+                    break;
+                case 3:
+                    quantity_tb.Text = 1.ToString();
+                    Phase++;
+                    break;
+                case 4:
+                    Room_from.IsDropDownOpen = true;
+                    Phase++;
+                    break;
+                case 5:
+                    Room_from.SelectedIndex = 0;
+                    Phase++;
+                    break;
+                case 6:
+                    Room_to.IsDropDownOpen = true;
+                    Phase++;
+                    break;
+                case 7:
+                    Room_to.SelectedIndex = 1;
+                    Phase++;
+                    break;
+                case 8:
+                    Date_picker.IsDropDownOpen = true;
+                   // Date_picker.Focus();
+                    Phase++;
+                    break;
+                case 9:
+                    Phase++;
+                    Date_picker.Text = "10/10/2022";
+                    break;
+                case 10:
+                    Phase++;
+                    Date_picker.IsDropDownOpen = false;
+                    break;
+                case 11:
+                    Transfer.Focus();
+                    Phase = -1;
+                    break;
+                default:
+                    DemoTimer.IsEnabled = false;
+                    Phase = 0;
+                    break;
+            }
         }
     }
 }
