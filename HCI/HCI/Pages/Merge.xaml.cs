@@ -31,6 +31,7 @@ namespace HCI.Pages
 
         DateTime date_time;
         DateTime date_time_end;
+        DateTime temp;
 
         public ObservableCollection<Room> Rooms { get; set; }
         public ObservableCollection<string> RoomTypes { get; set; }
@@ -86,6 +87,7 @@ namespace HCI.Pages
             {
                 MessageBoxResult result = MessageBox.Show("Select a time first");
                 date = DP1.Text;
+                date_time = DateTime.Parse(date);
                 return;
             }
             if (cboitem.Content != null)
@@ -107,6 +109,7 @@ namespace HCI.Pages
             {
                 MessageBoxResult result = MessageBox.Show("Select a time first");
                 date_end = DP1_Copy.Text;
+                date_time_end = DateTime.Parse(date_end);
                 return;
 
             }
@@ -128,6 +131,16 @@ namespace HCI.Pages
             Room room_2 = Rooms_2.SelectedItem as Room;
 
             Room new_room = new Room();
+            if(temp == date_time)
+            {
+                MessageBoxResult result = MessageBox.Show("Please input a date");
+                return;
+            }
+            if(temp == date_time_end)
+            {
+                MessageBoxResult result = MessageBox.Show("Please input a date");
+                return;
+            }
 
             DateTime start_date = date_time;
             DateTime end_date = date_time_end;

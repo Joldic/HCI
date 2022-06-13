@@ -31,6 +31,7 @@ namespace HCI.Pages
         public string d2;
         DateTime dt;
         DateTime dt_end;
+        DateTime temp;
 
         public ObservableCollection<Room> Rooms { get; set; }
         public Separation()
@@ -49,8 +50,9 @@ namespace HCI.Pages
             ComboBoxItem cboitem = cboTP.SelectedItem as ComboBoxItem;
             if (cboitem == null)
             {
-                MessageBoxResult result = MessageBox.Show("Select a time first");
+                //MessageBoxResult result = MessageBox.Show("Select a time first");
                 d = DP1.Text;
+                dt = DateTime.Parse(d);
                 return;
             }
             if (cboitem.Content != null)
@@ -70,8 +72,9 @@ namespace HCI.Pages
             ComboBoxItem cboitem = cboTP_Copy.SelectedItem as ComboBoxItem;
             if (cboitem == null)
             {
-                MessageBoxResult result = MessageBox.Show("Select a time first");
+                //MessageBoxResult result = MessageBox.Show("Select a time first");
                 d2 = DP1_Copy.Text;
+                dt_end = DateTime.Parse(d2);
                 return;
 
             }
@@ -89,7 +92,17 @@ namespace HCI.Pages
 
         private void SeparateButton_Click(object sender, RoutedEventArgs e)
         {
-            if(Room_names.SelectedItem == null)
+            if(dt == temp)
+            {
+                MessageBoxResult result = MessageBox.Show("Please input a date");
+                return;
+            }
+            if (dt_end == temp)
+            {
+                MessageBoxResult result = MessageBox.Show("Please input a date");
+                return;
+            }
+            if (Room_names.SelectedItem == null)
             {
                 MessageBoxResult result = MessageBox.Show("Please select a room");
                 return;
