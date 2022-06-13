@@ -36,9 +36,12 @@ namespace HCI.Pages
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             Window window = new MainWindow();
-            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            window.Show();
+            //window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.Visibility = Visibility.Hidden;
+            window.Show();
+            //
+           // this.NavigationService.Navigate(null);
+            //this.Close();
         }
 
     }

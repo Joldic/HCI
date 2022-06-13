@@ -44,7 +44,7 @@
                 <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
             </StackPanel>
             <StackPanel>
-                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" Command="NavigationCommands.BrowseBack"  RenderTransformOrigin="0.849,0.702" Width="86" />
+                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" Click="LogoutButton_Click" RenderTransformOrigin="0.849,0.702" Width="86" />
             </StackPanel>
             <StackPanel Margin="38, 22, 5, 6" >
                 <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />

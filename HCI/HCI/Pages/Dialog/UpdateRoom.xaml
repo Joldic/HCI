@@ -9,7 +9,7 @@
       d:DesignHeight="750" d:DesignWidth="430"
       Title="UpdateRoom">
 
-    <Grid Background="White">
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
         <TextBox Name="room_name_tb" HorizontalAlignment="Center" Margin="0,119,0,0" TextWrapping="Wrap" Text="{Binding Path=roomName}" VerticalAlignment="Top" Width="234"/>
         <Label Content="Update Room" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top"/>
 

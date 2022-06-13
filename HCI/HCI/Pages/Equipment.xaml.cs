@@ -1,4 +1,5 @@
 ﻿using HCI.Controller;
+using HCI.Pages.Dialog;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
@@ -98,7 +99,9 @@ namespace HCI.Pages
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Model.Equipment equipment = GRD.SelectedItem as Model.Equipment;
+            var page = new UpdateEquipment(equipment);
+            this.NavigationService.Navigate(page); ;
         }
         public void SendMessage()
         {

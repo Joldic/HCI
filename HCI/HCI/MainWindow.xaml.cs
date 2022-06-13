@@ -67,7 +67,7 @@ namespace HCI
             window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             window.Show();
 
-            //this.Close();
+            this.Close();
 
             //this.Visibility = Visibility.Hidden;
 
