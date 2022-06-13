@@ -32,6 +32,7 @@ namespace HCI.Pages
         public string d2;
         DateTime dt;
         DateTime dt_end;
+        DateTime temp;
 
         public ObservableCollection<Room> Rooms { get; set; }
         public Renovation()
@@ -58,8 +59,9 @@ namespace HCI.Pages
             ComboBoxItem cboitem = cboTP.SelectedItem as ComboBoxItem;
             if(cboitem ==  null)
             {
-                MessageBoxResult result = MessageBox.Show("Select a time first");
+                //MessageBoxResult result = MessageBox.Show("Select a time first");
                 d = DP1.Text;
+                dt = DateTime.Parse(d);
                 return;
             }
             if (cboitem.Content != null)
@@ -79,8 +81,9 @@ namespace HCI.Pages
             ComboBoxItem cboitem = cboTP_Copy.SelectedItem as ComboBoxItem;
             if (cboitem == null)
             {
-                MessageBoxResult result = MessageBox.Show("Select a time first");
+                //MessageBoxResult result = MessageBox.Show("Select a time first");
                 d2 = DP1_Copy.Text;
+                dt_end = DateTime.Parse(d2);
                 return;
 
             }
@@ -98,6 +101,16 @@ namespace HCI.Pages
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if(dt == temp)
+            {
+                MessageBoxResult d1 = MessageBox.Show("Please enter date");
+                return;
+            }
+            if(dt_end == temp)
+            {
+                MessageBoxResult d2 = MessageBox.Show("Please enter date");
+                return;
+            }
             Room roomItem = Room_names.SelectedItem as Room;
             if(roomItem == null)
             {

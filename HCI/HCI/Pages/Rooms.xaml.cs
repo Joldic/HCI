@@ -74,5 +74,10 @@ namespace HCI.Pages
             NavigationService.Navigate(page);
         }
 
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new AddRoom();
+            this.NavigationService.Navigate(page);
+        }
     }
 }

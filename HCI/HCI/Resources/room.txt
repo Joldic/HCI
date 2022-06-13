@@ -6,3 +6,4 @@
 12;validacija;operatingRoom;14;True
 14;soba2 B;ordinaryRoom;16;True
 15;soba2 A;ordinaryRoom;16;True
+16;soba 700;operatingRoom;89;True

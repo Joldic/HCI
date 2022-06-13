@@ -4,11 +4,49 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HCI.Pages.Dialog"
+      xmlns:n="clr-namespace:HCI"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="750" d:DesignWidth="430"
       Title="AddRoom">
 
-    <Grid>
-        
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
+
+
+
+
+        <WrapPanel Margin="31,608,-29,-103" >
+            <StackPanel>
+                <n:NavButton Text="Home" ImageSource="/Images/home.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Notifications" ImageSource="/Images/bell.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="My Profile" ImageSource="/Images/user.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel>
+                <n:NavButton Text="Log out" ImageSource="/Images/logout.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="86" />
+            </StackPanel>
+            <StackPanel Margin="38, 22, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/square.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="31" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/new-moon.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="31" Height="44" />
+            </StackPanel>
+            <StackPanel Margin="88, 20, 5, 6" >
+                <n:NavButton Text="Log out" ImageSource="/Images/arrow-left.png" NavUri="/Pages/Landing.xaml" RenderTransformOrigin="0.849,0.702" Width="44" Height="44" />
+            </StackPanel>
+        </WrapPanel>
+        <TextBox Name="name_tb" HorizontalAlignment="Center" Margin="0,138,0,0" TextWrapping="Wrap" Text="{Binding Path=RoomName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="266"/>
+        <TextBox Name="surface_tb" HorizontalAlignment="Center" Margin="0,337,0,0" TextWrapping="Wrap" Text="{Binding Path=Surface}" VerticalAlignment="Top" Width="266"/>
+        <Label Content="Name" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
+        <Label Content="Type" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
+        <Label Content="Surface" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,1.141"/>
+        <Label Content="Add room" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,35,0,0" VerticalAlignment="Top"/>
+        <Button Name="AddButton" Content="Add" Command="{Binding SubmitCommand}" HorizontalAlignment="Left" Margin="245,462,0,0" VerticalAlignment="Top" Click="AddButton_Click" RenderTransformOrigin="0.504,-0.73"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="338,462,0,0" VerticalAlignment="Top" Command="{Binding CancelCommand}"/>
+        <ComboBox Name="RoomEnum" ItemsSource="{Binding RoomTypes}" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Width="266"/>
+
+
     </Grid>
 </Page>

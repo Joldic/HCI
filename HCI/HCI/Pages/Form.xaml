@@ -11,7 +11,7 @@
 
     <Grid Background="White" ButtonBase.Click="Grid_Click">
         <Grid>
-            <TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>
+            <!--<TextBox HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="410"/>-->
         </Grid>
         <!--<ListView x:Name="GRD" ItemsSource="{Binding RoomsList}" >
             <ListView.ItemTemplate>

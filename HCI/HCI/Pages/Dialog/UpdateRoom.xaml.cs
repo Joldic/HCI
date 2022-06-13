@@ -34,7 +34,7 @@ namespace HCI.Pages.Dialog
             var app = Application.Current as App;
             _roomController = app.RoomControler;
             this.DataContext = this;
-            roomToUpdate = room;
+            roomToUpdate = room;    
             this._squareFootage = room.SquareFootage;
             this._roomName = room.Name;
             RoomEnum.SelectedItem = room.Type.ToString();
